@@ -67,7 +67,7 @@ Insurance Fraud Detector
 │  └─ 📄openai_analyzer.py
 ├─ 📄.gitignore
 ├─ 📄app.py
-└─ 📄README_.md
+└─ 📄README.md
 ```
 
 ## Notes
