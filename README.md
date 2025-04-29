@@ -1,6 +1,8 @@
 # Insurance Fraud Detector
 A web application that analyzes insurance claim documents for potential fraud by detecting inconsistencies using OpenAI's GPT model.
 
+![UI Overview](/Screenshot.jpeg)
+
 ## Features
 - Upload and analyze insurance claim documents (PDF or TXT formats)
 - AI-powered analysis of claim narratives for inconsistencies
