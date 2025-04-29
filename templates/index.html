@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Fraud Detector</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Insurance Fraud Detector</h1>
+            <p>Upload an insurance claim document (PDF or TXT) to analyze for potential fraud</p>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="file-input">
+                        <label for="document">Upload Document:</label>
+                        <input type="file" id="document" name="file" accept=".pdf,.txt" required>
+                    </div>
+                    <button type="submit" id="analyze-btn">Analyze Document</button>
+                </form>
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing document... This may take a moment.</p>
+                </div>
+            </section>
+            
+            <section id="results-section" class="hidden">
+                <h2>Analysis Results (from 1 to 100)</h2>
+                <div class="score-container">
+                    <div id="score-display">
+                        <div id="score-value">0</div>
+                        <div id="score-label">Trustworthiness Score</div>
+                    </div>
+                </div>
+                <div class="result-details">
+                    <h3>Summary</h3>
+                    <p id="summary-text"></p>
+                    
+                    <h3>Detailed Analysis</h3>
+                    <p id="detailed-analysis"></p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Insurance Fraud Detector &copy; 2025</p>
+        </footer>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
