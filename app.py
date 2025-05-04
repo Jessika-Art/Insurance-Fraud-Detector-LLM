@@ -42,7 +42,7 @@ class AnalysisResult(BaseModel):
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/analyze/", response_class=JSONResponse)
+@app.post("/analyze/", response_model=AnalysisResult)
 async def analyze_document(file: UploadFile = File(...)):
     try:
         # Check file extension
@@ -85,7 +85,7 @@ async def analyze_document(file: UploadFile = File(...)):
             logger.error(f"Error saving results: {str(e)}")
             # Continue even if saving fails
         
-        return analysis_result
+        return AnalysisResult(**analysis_result)
     
     except HTTPException:
         # Re-raise HTTP exceptions
